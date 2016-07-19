@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--CSS-->
+<style>
+.myForm label:hover {
+font-size:40px;
+}
+.myForm fieldset {
+background:lightyellow;
+width:720px;
+padding:10px;
+border:10px solid yellow;
+}
+.myForm label {
+width:180px;
+display:inline-block;
+text-align:right;
+text-align:top;
+}
+.myForm textarea {
+width:360px;
+height:50px;
+}
+.checkbox {
+width:auto;
+}
+.radio{
+width:auto;
+}
+.lowerRange{
+background-color:red;
+text-align:center;
+padding:9px;
+}
+.higherRange{
+background-color:purple;
+text-align:center;
+padding:9px;
+}
+</style>
+<form class="myForm" method="get" enctype="" action="file:////~rossiter/cgi-bin/show_everything.php">
+<head>
+  <h1>Please Enter Your Details For Our Government Website!</h1>
+</head>
+<body>
+  <fieldset>
+        <legend>Your Face</legend>
+          <label>Your image:</label><input type="file" [required]><br>
+          <label>Image preview:</label><img id="preview"><br>
+  </fieldset><br>
+  <fieldset>
+          <legend>Your General Details</legend>
+          <label>Name:</label> <input type="text" name="Your full name" value="Your Full Name" [required]><br>
+          <label>Gender: </label><input type="radio" name="gender" value="male" [required]> Male <input type="radio" name="gender" value="female"[required]> Female<br>
+          <label>Age: </label><input type="number"  [required]> <br>
+          <label>  Date of birth: </label><input type="date"> <br>
+          <label>  Favorite color:</label>  <input type="color"><br>
+          <label>  Which country: </label><select name="select">
+                <option value="value1">US</option>
+                <option value="value2">UK</option>
+                <option value="value3">NZ</option>
+                <option value="value4">AU</option>
+                <option value="value5">IN</option>
+                <option value="value6">No selection</option>
+                </select> <br>
+  </fieldset><br>
+  <fieldset>
+          <legend>Your Indicators</legend>
+          <label for="height">Height:</label><span class="lowerRange"> Short</span><input type="range" min="0" max="100"name="Height">
+          <span class="higherRange"> Tall </span><br>
+          <label for="salary">Salary:</label><span class="lowerRange"> Poor </span><input type="range" min="0" max="100"name="Salary">
+          <span class="higherRange">Rich</span><br>
+  </fieldset><br>
+  <fieldset>
+          <legend>Your Contact Information</legend>
+          <label>Email:</label> <input type="text" name="Email" [required]><br>
+          <label>Mobile:</label> <input type="tel" name="mobile"><br>
+          <label>Address:</label> <textarea> </textarea> <br>
+          <label for="checkbox"> <span class="checkbox"></span>Method to contact you: </label><input type="checkbox">
+                  <checked value="value1">Email</checked>
+                  <input type="checkbox">
+                  <checked value="value2">Whats App</checked>
+                  <input type="checkbox">
+                  <checked value="value3">In-chat</checked><br>
+  </fieldset><br>
+  <input type="submit" value="Submit">
+</form>
+  <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
